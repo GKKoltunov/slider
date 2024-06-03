@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: min-content;
+    overflow: hidden;
+    margin-top: 100px;
+    padding: 10px 10px;
+
+}
+
+.reklama{
+    transform: translateX(0px);
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    height: max-content;
+    transition: 0.5s;
+}
+
+.card{
+    width: 192px;
+    height: 256px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #e6d3d300;
+    outline: 1px black solid;  
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+.text{  
+    width: 100%;
+    height: 30%;
+    background-color: rgba(249, 246, 246, 0.5);
+	padding: 10px;
+	color: #060606;
+    text-align: center;
+    overflow: hidden;
+   }
+
+.text::after{
+    content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 1.2em;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+	pointer-events: none;
+}
+.card-img{
+    object-fit: cover;
+    object-position: top;
+    height: 70%;
+}
+
+.badge{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: max-content;
+    height: max-content;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 4px;
+    opacity: 0.7;
+}
+
+.info{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.info:hover{
+    background-color: aqua;
+    scale: 1.5;
+}
+
+.slide-left{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left:10px;
+    top: 40%;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+    transition:0.5s
+}
+
+.slide-right{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right:10px;
+    top: 40%;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.slide-left:hover{
+    scale: 1.2;
+}
+
+.slide-right:hover{
+    scale:1.2;
+}
+
+.tooltip{
+    width: 100%;
+    position:absolute;
+    background-color: bisque;
+    border-radius: 15px;
+    justify-content: space-around;
+    display: none;
+    transition:0.5s;
+    align-items: center;
+   font-size: small;
+   color: #060606;
+}
+
+.tooltip-info{
+    text-align: center; 
+}
+
+.closeInfo{
+    border: none;
+    background-color: bisque;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+}
